@@ -1,32 +1,36 @@
 
 public class BankAccount {
 	
-	protected double balance;
-	
-	
-	BankAccount(double balance){
-		this.balance = balance;
-	}
-	
-	
-	public double deposit(double amount) {
-		return this.balance;
-	}
-	
-	
-	public void withdrwa(double amount) {
-	if(amount > 0 && amount <= balance ) {	
-			balance -= amount;
-			System.out.println(amount + balance);	
-		}
+    protected double balance;
 
-		else {
-			System.out.println("You have reached your day limit!");
-			
-		}
-	
-	}
-	
-	
+    // Constructor to initialize balance
+    public BankAccount(double initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    // Deposit method
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.printf("You have deposited R%f. New Balance: R%f \n" ,amount, balance);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+
+    // Withdraw method
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.printf("You have Withdrew R%f. Remaining Balance: R%f \n" ,amount, balance);
+        } else {
+            System.out.println("Insufficient funds or invalid amount.");
+        }
+    }
+
+    // Check balance method
+    public double getBalance() {
+        return balance;
+    }
 
 }

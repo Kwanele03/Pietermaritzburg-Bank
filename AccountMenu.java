@@ -5,15 +5,17 @@ public class AccountMenu {
 		// TODO Auto-generated method stub
 		
 		
-		BankAccount account = new SavingsAccount(3000);		
-		CheckingAccount check = new CheckingAccount (100, 0);
-		
-	
-	System.out.printf("I have deposited %f into my Saving Account.  \n", account.deposit(500));
-	check.withdrwa(20);
-	check.withdrwa(20);
-		
+        // Test SavingsAccount
+        SavingsAccount savings = new SavingsAccount(1000, 5);
+        savings.deposit(500);
+        savings.applyInterest();
+        savings.withdraw(300);
 
-	}
+        // Test CheckingAccount
+        CheckingAccount checking = new CheckingAccount(500, 200);
+        checking.deposit(200);
+        checking.withdraw(800); // Uses overdraft
+        checking.withdraw(50);  // Exceeds overdraft limit
+    }
 
 }
