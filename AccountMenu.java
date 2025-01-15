@@ -6,7 +6,7 @@ public class AccountMenu {
 		
 		
         // Test SavingsAccount
-        SavingsAccount savings = new SavingsAccount(1000, 5);
+        SavingsAccount savings = new SavingsAccount(1200, 5);
         savings.deposit(500);
         savings.applyInterest();
         savings.withdraw(300);
