@@ -13,7 +13,8 @@ public class BankAccount {
         if (amount > 0) {
             balance += amount;
             System.out.printf("You have deposited R%f. New Balance: R%f \n" ,amount, balance);
-        } else {
+        } 
+	else {
             System.out.println("Invalid deposit amount.");
         }
     }
@@ -23,7 +24,8 @@ public class BankAccount {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
             System.out.printf("You have Withdrew R%f. Remaining Balance: R%f \n" ,amount, balance);
-        } else {
+        }
+	else {
             System.out.println("Insufficient funds or invalid amount.");
         }
     }
