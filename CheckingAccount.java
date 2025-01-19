@@ -15,11 +15,10 @@ public class CheckingAccount extends BankAccount{
         if (amount > 0 && amount <= balance + overdraftLimit) {
             balance -= amount;
             System.out.printf("You have Withdrew R%f. Remaining Balance: R%f \n" ,amount, balance);
-        } else {
+        } 
+	else {
             System.out.println("Exceeded overdraft limit or invalid amount.");
         }
     }
 	
-	
-
 }
