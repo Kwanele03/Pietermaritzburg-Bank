@@ -15,7 +15,5 @@ public class SavingsAccount extends BankAccount  {
         balance += interest;
         System.out.printf("You are getting there! Your applied interest is R%f. Updated Balance: R%f \n" , interest, balance);
     }
-    
-    
 
 }
